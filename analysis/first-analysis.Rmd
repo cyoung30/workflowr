@@ -1,0 +1,29 @@
+---
+title: "first-analysis"
+author: "cyoung30"
+date: "2024-02-22"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+```{r}
+## load packages
+library(tidyverse)
+library(readxl)
+
+lichen_data <- read_excel("/Users/carteryoung/Desktop/cr/FULL_coenogonium.xlsx")
+write.csv(lichen_data, "lichen.csv", row.names = FALSE)
+
+(g <- ggplot(lichen_data, aes(x = `Substrate_Diameter`, y = `Surface_Area`)))
+
+g + geom_point(aes(x = `Substrate_Diameter`, y = `Surface_Area`), 
+               shape = "diamond", 
+               color = "darkolivegreen3", 
+               size = 2) + 
+  geom_smooth(method = "lm", se = FALSE)
+
+```
+
