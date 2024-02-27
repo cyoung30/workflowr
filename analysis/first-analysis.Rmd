@@ -27,3 +27,28 @@ g + geom_point(aes(x = `Substrate_Diameter`, y = `Surface_Area`),
 
 ```
 
+
+```{r}
+library(ggplot2)
+library(ggthemes)
+library(tidyverse)
+library(agricolae)
+library(plyr)
+library(lmodel2)
+library(rstatix)
+
+lichen <- lichen_data
+
+reg.lichen <-ggplot(lichen_data, aes(x = Substrate_Diameter, y = Surface_Area)) + 
+  geom_point(size=3)+ 
+  geom_smooth(method="lm",se=FALSE, color="black")+ 
+  theme_tufte(base_size=20) + 
+  geom_rangeframe() +
+  scale_y_continuous() + #name axis here 
+  scale_x_continuous()+ #name axsis here
+  theme(axis.ticks.length=unit(-0.25, "cm"), 
+        axis.text.x = element_text(margin=unit(c(0.5,0.5,0.5,0.5), "cm")),
+        axis.text.y = element_text(margin=unit(c(0.5,0.5,0.5,0.5), "cm")))
+reg.lichen
+```
+
