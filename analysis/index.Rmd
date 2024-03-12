@@ -1,5 +1,5 @@
 ---
-title: "Home"
+title: "Carter Young"
 site: workflowr::wflow_site
 output:
   workflowr::wflow_html:
@@ -8,8 +8,12 @@ editor_options:
   chunk_output_type: console
 ---
 
-Welcome to my research website.
+Hello!
 
-Click on this [link](first-analysis.html) to see my results.
+I am an undergraduate student at Villanova University. My primary interest is all things invertebrate, with a focus on underappreciated taxa like centipedes and other myriapods, mites, planaria, harvestmen, and isopods. My lifelong love for invertebrates has recently been complemented by a newfound appreciation for photography, and you can see some of my photos [here](second-analysis.html).
 
-Click on this [link](second-analysis.html) to see some pointless testing.
+Currently, I am working with Dr. Vikram Iyengar on social networks in the maritime earwig (*Anisolabis maritima*), a shore-dwelling species with uniquely sexually dimorphic weaponry which influences interactions between individuals. Stay tuned for what we discover about this pinchy beach bum in summer 2024!
+
+This website also includes a short study of the epiphytic lichen *Coenogonium*, conducted in northeastern Costa Rica during January 2024 as part of Villanova University's Field Ecology and Evolution Course. You can view this study [here](first-analysis.html).
+
+
