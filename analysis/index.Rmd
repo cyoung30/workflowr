@@ -10,7 +10,7 @@ editor_options:
 
 Hello!
 
-I am an undergraduate student at Villanova University. My primary interest is all things invertebrate, with a focus on underappreciated taxa like centipedes and other myriapods, mites, planaria, harvestmen, and isopods. My lifelong love for invertebrates has recently been complemented by a newfound appreciation for photography, and you can see some of my photos [here](second-analysis.html).
+I am an undergraduate student at Villanova University. My primary interest is all things invertebrate, with a focus on underappreciated taxa like centipedes and other myriapods, mites, planaria, harvestmen, and isopods. My lifelong love for invertebrates has recently been complemented by a newfound appreciation for photography, and you can see some of my photos [here](second-analysis.html). For more, check out [iNaturalist page](https://www.inaturalist.org/observations?place_id=any&user_id=thirty_legs&verifiable=any).
 
 Currently, I am working with Dr. Vikram Iyengar on social networks in the maritime earwig (*Anisolabis maritima*), a shore-dwelling species with uniquely sexually dimorphic weaponry which influences interactions between individuals. Stay tuned for what we discover about this pinchy beach bum in summer 2024!
 
