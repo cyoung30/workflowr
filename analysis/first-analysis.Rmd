@@ -6,49 +6,122 @@ output: workflowr::wflow_html
 editor_options:
   chunk_output_type: console
 ---
+I’m lichen it over here: Habitat preference of a corticolous understory lichen in a Costa Rican lowland rainforest
 
-## Introduction
+Carter J. Young
 
-```{r}
-## load packages
-library(tidyverse)
-library(readxl)
-
-lichen_data <- read_excel("/Users/carteryoung/Desktop/cr/FULL_coenogonium.xlsx")
-write.csv(lichen_data, "lichen.csv", row.names = FALSE)
-
-(g <- ggplot(lichen_data, aes(x = `Substrate_Diameter`, y = `Surface_Area`)))
-
-g + geom_point(aes(x = `Substrate_Diameter`, y = `Surface_Area`), 
-               shape = "diamond", 
-               color = "darkolivegreen3", 
-               size = 2) + 
-  geom_smooth(method = "lm", se = FALSE)
-
-```
+Villanova University, 800 East Lancaster Ave. Villanova, Pennsylvania, 19085
 
 
-```{r}
+
+ABSTRACT
+
+Lichens…
+
+INTRODUCTION
+
+Lichens are composite organisms formed from a mutualistic association between a fungus, an alga or cyanobacterium, and frequently other fungi such as yeasts. They are highly biodiverse in tropical rainforests, with upper estimates of 300 species of lichen per hectare (Komposch and Hafellner 2000). In tropical ecosystems, lichenized fungi are of particular importance as epiphytes, particularly corticolous forms that colonize trunks, lianas, and stems, but some tropical lichens may additionally display an epiphyllic growth habit. However, lowland tropical rainforests pose several problems for corticolous lichens: constant rainfall waterlogs photosynthetic tissues, obstructing CO2 diffusion, and thick vegetation blocks light from reaching the understory. These challenges may relate to the stark absence of foliose (leafy) and fruticose (branched, shrubby) morphologies among lichens in the lowland tropics, where flatter, crustose (crust-forming) lichens are favored instead (Lakatos et al. 2006). 
+
+Coenogonium, a genus of lichens in the monotypic family Coenogoniaceae, are physiologically and morphologically unique among the lichenized fungi of tropical lowland rainforests. While many tropical corticolous lichens are crustose, the thalli (vegetative structures) Coenogonium are fibrous or “felt-like” in texture and display an unusual disk-shaped growth form that protrudes horizontally from the substrate (Fig. 1), which some authors note bears a visual resemblance to bracket fungi in the Polyporaceae (Karling 1934). Unlike other lichens, in which the mycobiont dominates, hyphae of the Coenogonium mycobiont envelop but do not completely cover cells of the filamentous cyanobacterium photobiont Trentepohlia, which form most of the mass of thalli and are exposed on the surface of the lichen. Coenogonium can therefore remain photosynthetically active at extreme water saturation, with no drop in net photosynthesis from 170-600% thallus water content, while other lichens with a higher proportion of mycobiont cells cannot effectively diffuse CO2 to the photobiont layer when wetted past optimal levels (Thomas et al. 1996). Its horizontal alignment additionally allows it to exploit sunlight and falling water although its flat shape and open construction increase evaporation rates, leading to desiccation and inactivity (Lakatos et al. 2006).
+
+```{r Lichen1, echo=FALSE, message=FALSE, warning=FALSE}
+
+# load libraries
 library(ggplot2)
+library(ggpmisc)
 library(ggthemes)
-library(tidyverse)
-library(agricolae)
-library(plyr)
-library(lmodel2)
-library(rstatix)
+library(readxl)
+library(scales)
 
-lichen <- lichen_data
+# load data 
+lichen_data <- read_excel("data/coenogonium.xlsx")
+light_data <- read_excel("data/luxdens.xlsx")
 
-reg.lichen <-ggplot(lichen_data, aes(x = Substrate_Diameter, y = Surface_Area)) + 
-  geom_point(size=3)+ 
-  geom_smooth(method="lm",se=FALSE, color="black")+ 
-  theme_tufte(base_size=20) + 
+# LUX x DENS ------------------------------------------------------------------
+luxdens.reg <- ggplot(light_data, aes(x = open, y = lux)) +
+  # add points
+  geom_point(size = 1, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=15) + 
+  # axis management
   geom_rangeframe() +
-  scale_y_continuous() + #name axis here 
-  scale_x_continuous()+ #name axsis here
-  theme(axis.ticks.length=unit(-0.25, "cm"), 
-        axis.text.x = element_text(margin=unit(c(0.5,0.5,0.5,0.5), "cm")),
-        axis.text.y = element_text(margin=unit(c(0.5,0.5,0.5,0.5), "cm")))
-reg.lichen
+  # limit axes
+  scale_x_continuous(limits = c(0, 60)) + 
+  scale_y_continuous(limits = c(0, 17000), labels = comma) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  # labels
+  labs(x = "Percent Canopy Open", y = "Lux") 
+
+# AREA x DIAMETER -------------------------------------------------------------
+lichen.reg <- ggplot(lichen_data, aes(x = Diameter, y = Area)) +
+  # add points
+  geom_point(size = 1.5, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=15) + 
+  # axis management
+  geom_rangeframe() +
+  # limit axes
+  scale_x_continuous(limits = c(0, 30)) + 
+  scale_y_continuous(limits = c(0, 8)) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  # axis labels
+  labs(x = "Substrate Diameter", y = "Thallus Surface Area") 
+ 
+# AREA x DENS -----------------------------------------------------------------
+dens.reg <- ggplot(lichen_data, aes(x = open, y = Area)) + 
+# add points
+  geom_point(size = 1.5, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=15) + 
+  # axis management
+  geom_rangeframe() +
+  # limit axes
+  scale_x_continuous(limits = c(0, 13)) + 
+  scale_y_continuous(limits = c(0, 8)) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  labs(x = "Percent Canopy Open", y = "Thallus Surface Area") 
+ 
+# AREA x LUX ------------------------------------------------------------------
+lux.reg <- ggplot(lichen_data, aes(x = lux, y = Area)) +
+  # add points
+  geom_point(size = 1.5, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=15) + 
+  # axis management
+  geom_rangeframe() +
+  # limit axes
+  scale_x_continuous(limits = c(0, 4100)) + 
+  scale_y_continuous(limits = c(0, 8)) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  # axis labels
+  labs(x = "Lux", y = "Thallus Surface Area") 
+ 
+
+
+
+# visualize
+print(luxdens.reg)
+# visualize
+print(lichen.reg)
+# visualize
+print(dens.reg)
+# visualize
+print(lux.reg)
 ```
 
