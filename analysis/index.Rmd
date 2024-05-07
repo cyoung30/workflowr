@@ -10,10 +10,10 @@ editor_options:
 
 Hello!
 
-I am an undergraduate student at Villanova University. My primary interest is all things invertebrate, with a focus on underappreciated taxa like centipedes and other myriapods, mites, planaria, harvestmen, and isopods. My lifelong love for invertebrates has recently been complemented by a newfound appreciation for photography, and you can see some of my photos [here](second-analysis.html). For more, check out my [iNaturalist page](https://www.inaturalist.org/observations?place_id=any&user_id=thirty_legs&verifiable=any).
+I am an undergraduate student at Villanova University. My primary interest is all things invertebrate, with a focus on underappreciated taxa like centipedes and other myriapods, mites, planaria, harvestmen, and isopods. My lifelong love for invertebrates has recently been complemented by a newfound appreciation for photography, and you can see some of my photos [here](worms.html). For more, check out my [iNaturalist page](https://www.inaturalist.org/observations?place_id=any&user_id=thirty_legs&verifiable=any).
 
 Currently, I am working with Dr. Vikram Iyengar on social networks in the maritime earwig (*Anisolabis maritima*), a shore-dwelling species with uniquely sexually dimorphic weaponry which influences interactions between individuals. Stay tuned for what we discover about this pinchy beach bum in summer 2024!
 
-This website also includes a short study of the epiphytic lichen *Coenogonium*, conducted in northeastern Costa Rica during January 2024 as part of Villanova University's Field Ecology and Evolution Course. You can view this study [here](first-analysis.html).
+This website also includes a short study of the epiphytic lichen *Coenogonium*, conducted in northeastern Costa Rica during January 2024 as part of Villanova University's Field Ecology and Evolution Course. You can view this study [here](lichenproject.html).
 
 
