@@ -1,0 +1,129 @@
+---
+title: "I’m *lichen* it over here: Habitat preference of a corticolous understory lichen in a Costa Rican lowland rainforest"
+author: "Carter J. Young"
+date: "2024-02-22"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+Villanova University, 800 East Lancaster Ave. Villanova, Pennsylvania, 19085
+
+## Abstract
+
+The darkness of the tropical rainforest understory presents a substantial challenge for epiphytes living there to overcome. I studied how substrate diameter, canopy cover, and access to light affect the growth of lichens in the genus *Coenogonium* at Camaquiri Conservation Initiative (Limón, Costa Rica). *Coenogonium* is unique among tropical understory lichens because its thalli are mostly composed of the cyanobacteria photobiont instead of the fungal symbiont that usually dominates in other lichens. Due to this morphology, they are one of the only lichens that can photosynthesize even when waterlogged, but also dessicate quickly, suggesting they might occupy a specialist niche within the udnerstory epiphyte community.
+
+```{r, echo=FALSE, fig.cap="*Coenogonium* cf. *linkii* on a palm root at Camaquiri Conservation Initiative", out.width = '70%'}
+library(grid)
+library(png)
+
+lchn <- readPNG("docs/photo_assets/lichen.png")
+grid.raster(lchn, just = "center")
+```
+
+## Predictions and Results
+
+Although I predicted that this unusual lichen would show more successful growth on small-diameter substrates, beneath a partially closed canopy, and in moderate light levels, I was unable to detect a relationship between the surface area of *Coenogonium* thalli and the growth site conditions. 
+
+
+```{r Lichen1, echo=FALSE, message=FALSE, warning=FALSE}
+# load libraries
+library(ggplot2)
+library(ggpmisc)
+library(ggthemes)
+library(readxl)
+library(scales)
+
+# load data 
+lichen_data <- read_excel("data/coenogonium.xlsx")
+light_data <- read_excel("data/luxdens.xlsx")
+```
+
+No significant associations between lichen surface area and each of the predictor variables were found. The size of Coenogonium thalli showed no relationship with the substrate diameter (R2 = 0.005151;  F = 0.8905, df = 1,175; P =0.3467), openness of the canopy (R2 = 0.0024;  F = 0.4211, df = 1,175; P = 0.5172), or light level (R2 = 0.005151;  F = 0.8905, df = 1,175; P = 0.5172) (see below). 
+
+
+```{r Lichen2, echo=FALSE, message=FALSE, warning=FALSE}
+# AREA x DIAMETER -------------------------------------------------------------
+lichen.reg <- ggplot(lichen_data, aes(x = Diameter, y = Area)) +
+  # add points
+  geom_point(size = 2, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=20) + 
+  # axis management
+  geom_rangeframe() +
+  # limit axes
+  scale_x_continuous(limits = c(0, 30)) + 
+  scale_y_continuous(limits = c(0, 8)) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  # axis labels
+  labs(x = "Substrate Diameter", y = "Thallus Surface Area") +
+  theme(panel.spacing = unit(.05, "lines"),
+        panel.border = element_rect(color = "black", fill = NA, size = 1), 
+        strip.background = element_rect(color = "black", size = 1))
+# visualize
+print(lichen.reg)
+ 
+```
+
+
+```{r Lichen3, echo=FALSE, message=FALSE, warning=FALSE}
+# AREA x DENS -----------------------------------------------------------------
+dens.reg <- ggplot(lichen_data, aes(x = open, y = Area)) + 
+# add points
+  geom_point(size = 2, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=20) + 
+  # axis management
+  geom_rangeframe() +
+  # limit axes
+  scale_x_continuous(limits = c(0, 13)) + 
+  scale_y_continuous(limits = c(0, 8)) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  labs(x = "Percent Canopy Open", y = "Thallus Surface Area") +
+  theme(panel.spacing = unit(.05, "lines"),
+        panel.border = element_rect(color = "black", fill = NA, size = 1), 
+        strip.background = element_rect(color = "black", size = 1))
+# visualize
+print(dens.reg)
+```
+
+
+```{r Lichen4, echo=FALSE, message=FALSE, warning=FALSE}
+# AREA x LUX ------------------------------------------------------------------
+lux.reg <- ggplot(lichen_data, aes(x = lux, y = Area)) +
+  # add points
+  geom_point(size = 2, shape = 1, color = "black") +
+  # add regression
+  geom_smooth(method="lm", se=FALSE, color="black")+ 
+  # add theme
+  theme_tufte(base_size=20) + 
+  # axis management
+  geom_rangeframe() +
+  # limit axes
+  scale_x_continuous(limits = c(0, 4500)) + 
+  scale_y_continuous(limits = c(0, 8)) + 
+  # add axes lines
+  theme(axis.line.x = element_line(color = "black", size = 0.2), 
+        axis.line.y = element_line(color = "black", size = 0.2)) +
+  # axis labels
+  labs(x = "Lux", y = "Thallus Surface Area") +
+  theme(panel.spacing = unit(.05, "lines"),
+        panel.border = element_rect(color = "black", fill = NA, size = 1), 
+        strip.background = element_rect(color = "black", size = 1))
+# visualize
+print(lux.reg)
+```
+
+## Conclusions
+One possible explanation of these findings is that *Coenogonium* is more adaptable than its specialized anatomy would suggest and can successfully colonize a relatively broad range of microhabitat types. However, it is likely that the measurements taken for this study were not precise enough to describe the microhabitats where lichens were found, especially since *Coenogonium* appear to be adapted to "sunflecks", temporary patches of light that reach the understory and which my methods were unable to capture. Future studies on this genus should examine the conditions directly at microsites inhabited by lichens and may benefit from incorporating additional environmental factors such as rainfall and phorophyte species to accurately determine *Coenogonium* habitat preference.
+
+
+
+
