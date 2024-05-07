@@ -1,13 +1,15 @@
 name: workflowr
 output_dir: ../docs
 navbar:
-  title: workflowr
+  title: C. Young and Bugs
   left:
   - text: Home
     href: index.html
-  - text: About
-    href: about.html
-  - text: License
+  - text: "Coenogonium"
+    href: lichenproject.html
+  - text: "Photography"
+    href: worms.html
+  - text: "License"
     href: license.html
   right:
   - icon: fab fa-github
@@ -17,5 +19,5 @@ output:
   workflowr::wflow_html:
     toc: yes
     toc_float: yes
-    theme: cosmo
+    theme: lumen
     highlight: textmate
