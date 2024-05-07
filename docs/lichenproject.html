@@ -9,9 +9,11 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="Carter J. Young" />
 
+<meta name="date" content="2024-02-22" />
 
-<title>Carter Young</title>
+<title>I’m lichen it over here: Habitat preference of a corticolous understory lichen in a Costa Rican lowland rainforest</title>
 
 <script src="site_libs/header-attrs-2.25/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,6 +31,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -231,6 +236,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -238,6 +306,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -284,7 +362,11 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Carter Young</h1>
+<h1 class="title toc-ignore">I’m <em>lichen</em> it over here: Habitat
+preference of a corticolous understory lichen in a Costa Rican lowland
+rainforest</h1>
+<h4 class="author">Carter J. Young</h4>
+<h4 class="date">2024-02-22</h4>
 
 </div>
 
@@ -317,7 +399,7 @@ class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span>
 </p>
 <p>
 <strong>Checks:</strong> <span
-class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2
+class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7
 <span class="glyphicon glyphicon-exclamation-sign text-danger"
 aria-hidden="true"></span> 0
 </p>
@@ -354,6 +436,90 @@ class="panel-collapse collapse">
 <p>Great! Since the R Markdown file has been committed to the Git
 repository, you know the exact version of the code that produced these
 results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the
+global environment can affect the analysis in your R Markdown file in
+unknown ways. For reproduciblity it’s best to always run the code in an
+empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20240220code">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Seed:</strong>
+<code>set.seed(20240220)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20240220code"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20240220)</code> was run prior to running
+the code in the R Markdown file. Setting a seed ensures that any results
+that rely on randomness, e.g. subsampling or permutations, are
+reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Session information:</strong>
+recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded"
+class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package
+versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be
+confident that you successfully produced the results during this
+run.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative">
+<span class="glyphicon glyphicon-ok text-success"
+aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
+</p>
+</div>
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr
+project makes it easier to run your code on other machines.</p>
 </div>
 </div>
 </div>
@@ -425,10 +591,11 @@ have uncommitted changes.
 
 <p>
 These are the previous versions of the repository in which changes were
-made to the R Markdown (<code>analysis/index.Rmd</code>) and HTML
-(<code>docs/index.html</code>) files. If you’ve configured a remote Git
-repository (see <code>?wflow_git_remote</code>), click on the hyperlinks
-in the table below to view the files as they were in that past version.
+made to the R Markdown (<code>analysis/lichenproject.Rmd</code>) and
+HTML (<code>docs/lichenproject.html</code>) files. If you’ve configured
+a remote Git repository (see <code>?wflow_git_remote</code>), click on
+the hyperlinks in the table below to view the files as they were in that
+past version.
 </p>
 <div class="table-responsive">
 <table class="table table-condensed table-hover">
@@ -454,10 +621,10 @@ Message
 <tbody>
 <tr>
 <td>
-html
+Rmd
 </td>
 <td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/be100ac300ebc19175f81fde0dd96e2ff5285a95/docs/index.html" target="_blank">be100ac</a>
+<a href="https://github.com/cyoung30/workflowr/blob/452ea39363aa47986f7c263a6f7d538fd1e0a1ca/analysis/lichenproject.Rmd" target="_blank">452ea39</a>
 </td>
 <td>
 cyoung30
@@ -466,245 +633,7 @@ cyoung30
 2024-05-07
 </td>
 <td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/d14870dd10bfd1d030024b0896fc8972dc8af35b/docs/index.html" target="_blank">d14870d</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-05-07
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/521729d84341f9198dd57b5c3a2a0069f03586c4/docs/index.html" target="_blank">521729d</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-03-23
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/cyoung30/workflowr/blob/10740a719e1b35f7687d2f559236553fcf9a57f4/analysis/index.Rmd" target="_blank">10740a7</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-03-23
-</td>
-<td>
-wflow_publish(c("analysis/index.Rmd", "analysis/first-analysis.Rmd"))
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/d3ac2893c4f8d92f4116f3c3587687be1d783504/docs/index.html" target="_blank">d3ac289</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-03-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/cyoung30/workflowr/blob/f98d5df0dc544ba16d5aa2f9ba1365655a96585e/analysis/index.Rmd" target="_blank">f98d5df</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-03-12
-</td>
-<td>
-Edits to website: added homepage
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/8c5c888d398a6f8e133a42c9868f3b27bd2764d4/docs/index.html" target="_blank">8c5c888</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-03-12
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/cyoung30/workflowr/blob/47354767bf921483c8d52a48322b688aff3d62ff/analysis/index.Rmd" target="_blank">4735476</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-03-12
-</td>
-<td>
-Edits to website: added homepage
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/e5a1554e444fe8e19bfe94b08b2da94ab9d6efa1/docs/index.html" target="_blank">e5a1554</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/46b845a6009a8177155ee4b27dbaa7c9778dcbc0/docs/index.html" target="_blank">46b845a</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/cyoung30/workflowr/blob/3e89e1d40bda685f98f487902ec3073dfb659a16/analysis/index.Rmd" target="_blank">3e89e1d</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-22
-</td>
-<td>
-Add my second analysis
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/4978f035d913ff5c9ebd9a78aca7d7d8c3c9217f/docs/index.html" target="_blank">4978f03</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/cyoung30/workflowr/blob/f18da3220408a4e9f18b8b3d31f01e079e6dd5c8/analysis/index.Rmd" target="_blank">f18da32</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-22
-</td>
-<td>
-Add my first analysis
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/cyoung30/workflowr/b86381a1ab9cedfe96e616776c9ae5d7bef3822b/docs/index.html" target="_blank">b86381a</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/cyoung30/workflowr/blob/a52d092fa99bb703871a92530b880f82bf6265dd/analysis/index.Rmd" target="_blank">a52d092</a>
-</td>
-<td>
-cyoung30
-</td>
-<td>
-2024-02-20
-</td>
-<td>
-Start workflowr project.
+update all pages and change theme
 </td>
 </tr>
 </tbody>
@@ -714,26 +643,111 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Hello!</p>
-<p>I am an undergraduate student at Villanova University. My primary
-interest is all things invertebrate, with a focus on underappreciated
-taxa like centipedes and other myriapods, mites, planaria, harvestmen,
-and isopods. My lifelong love for invertebrates has recently been
-complemented by a newfound appreciation for photography, and you can see
-some of my photos <a href="second-analysis.html">here</a>. For more,
-check out my <a
-href="https://www.inaturalist.org/observations?place_id=any&amp;user_id=thirty_legs&amp;verifiable=any">iNaturalist
-page</a>.</p>
-<p>Currently, I am working with Dr. Vikram Iyengar on social networks in
-the maritime earwig (<em>Anisolabis maritima</em>), a shore-dwelling
-species with uniquely sexually dimorphic weaponry which influences
-interactions between individuals. Stay tuned for what we discover about
-this pinchy beach bum in summer 2024!</p>
-<p>This website also includes a short study of the epiphytic lichen
-<em>Coenogonium</em>, conducted in northeastern Costa Rica during
-January 2024 as part of Villanova University’s Field Ecology and
-Evolution Course. You can view this study <a
-href="first-analysis.html">here</a>.</p>
+<p>Villanova University, 800 East Lancaster Ave. Villanova,
+Pennsylvania, 19085</p>
+<div id="abstract" class="section level2">
+<h2>Abstract</h2>
+<p>The darkness of the tropical rainforest understory presents a
+substantial challenge for epiphytes living there to overcome. I studied
+how substrate diameter, canopy cover, and access to light affect the
+growth of lichens in the genus <em>Coenogonium</em> at Camaquiri
+Conservation Initiative (Limón, Costa Rica). <em>Coenogonium</em> is
+unique among tropical understory lichens because its thalli are mostly
+composed of the cyanobacteria photobiont instead of the fungal symbiont
+that usually dominates in other lichens. Due to this morphology, they
+are one of the only lichens that can photosynthesize even when
+waterlogged, but also dessicate quickly, suggesting they might occupy a
+specialist niche within the udnerstory epiphyte community.</p>
+<div class="figure" style="text-align: center">
+<img src="figure/lichenproject.Rmd/unnamed-chunk-1-1.png" alt="*Coenogonium* cf. *linkii* on a palm root at Camaquiri Conservation Initiative" width="70%" />
+<p class="caption">
+<em>Coenogonium</em> cf. <em>linkii</em> on a palm root at Camaquiri
+Conservation Initiative
+</p>
+</div>
+</div>
+<div id="predictions-and-results" class="section level2">
+<h2>Predictions and Results</h2>
+<p>Although I predicted that this unusual lichen would show more
+successful growth on small-diameter substrates, beneath a partially
+closed canopy, and in moderate light levels, I was unable to detect a
+relationship between the surface area of <em>Coenogonium</em> thalli and
+the growth site conditions.</p>
+<p>No significant associations between lichen surface area and each of
+the predictor variables were found. The size of Coenogonium thalli
+showed no relationship with the substrate diameter (R2 = 0.005151; F =
+0.8905, df = 1,175; P =0.3467), openness of the canopy (R2 = 0.0024; F =
+0.4211, df = 1,175; P = 0.5172), or light level (R2 = 0.005151; F =
+0.8905, df = 1,175; P = 0.5172) (see below).</p>
+<p><img src="figure/lichenproject.Rmd/Lichen2-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/lichenproject.Rmd/Lichen3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="figure/lichenproject.Rmd/Lichen4-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="conclusions" class="section level2">
+<h2>Conclusions</h2>
+<p>One possible explanation of these findings is that
+<em>Coenogonium</em> is more adaptable than its specialized anatomy
+would suggest and can successfully colonize a relatively broad range of
+microhabitat types. However, it is likely that the measurements taken
+for this study were not precise enough to describe the microhabitats
+where lichens were found, especially since <em>Coenogonium</em> appear
+to be adapted to “sunflecks”, temporary patches of light that reach the
+understory and which my methods were unable to capture. Future studies
+on this genus should examine the conditions directly at microsites
+inhabited by lichens and may benefit from incorporating additional
+environmental factors such as rainfall and phorophyte species to
+accurately determine <em>Coenogonium</em> habitat preference.</p>
+<br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
+Session information
+</button>
+</p>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 4.3.2 (2023-10-31)
+Platform: x86_64-apple-darwin20 (64-bit)
+Running under: macOS Ventura 13.4
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRblas.0.dylib 
+LAPACK: /Library/Frameworks/R.framework/Versions/4.3-x86_64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+time zone: America/New_York
+tzcode source: internal
+
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+[1] scales_1.3.0    readxl_1.4.3    ggthemes_5.1.0  ggpmisc_0.5.5  
+[5] ggpp_0.5.6      ggplot2_3.4.4   png_0.1-8       workflowr_1.7.1
+
+loaded via a namespace (and not attached):
+ [1] gtable_0.3.4       xfun_0.42          bslib_0.6.1        processx_3.8.3    
+ [5] lattice_0.21-9     callr_3.7.3        vctrs_0.6.5        tools_4.3.2       
+ [9] ps_1.7.6           generics_0.1.3     tibble_3.2.1       fansi_1.0.6       
+[13] highr_0.10         pkgconfig_2.0.3    Matrix_1.6-1.1     lifecycle_1.0.4   
+[17] farver_2.1.1       compiler_4.3.2     stringr_1.5.1      git2r_0.33.0      
+[21] MatrixModels_0.5-3 munsell_0.5.0      getPass_0.2-4      SparseM_1.81      
+[25] httpuv_1.6.14      quantreg_5.97      htmltools_0.5.7    sass_0.4.8        
+[29] yaml_2.3.8         later_1.3.2        pillar_1.9.0       jquerylib_0.1.4   
+[33] whisker_0.4.1      MASS_7.3-60        cachem_1.0.8       nlme_3.1-163      
+[37] tidyselect_1.2.0   digest_0.6.34      stringi_1.8.3      dplyr_1.1.4       
+[41] purrr_1.0.2        labeling_0.4.3     splines_4.3.2      rprojroot_2.0.4   
+[45] fastmap_1.1.1      colorspace_2.1-0   cli_3.6.2          magrittr_2.0.3    
+[49] survival_3.5-7     utf8_1.2.4         withr_3.0.0        promises_1.2.1    
+[53] rmarkdown_2.25     httr_1.4.7         cellranger_1.1.0   evaluate_0.23     
+[57] knitr_1.45         mgcv_1.9-0         rlang_1.1.3        Rcpp_1.0.12       
+[61] glue_1.7.0         polynom_1.4-1      rstudioapi_0.15.0  jsonlite_1.8.8    
+[65] R6_2.5.1           fs_1.6.3          </code></pre>
+</div>
+</div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -751,6 +765,8 @@ footer is added to webpages before the MathJax javascript. -->
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -783,6 +799,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
