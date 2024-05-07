@@ -14,6 +14,6 @@ I am an undergraduate student at Villanova University. My primary interest is al
 
 Currently, I am working with Dr. Vikram Iyengar on social networks in the maritime earwig (*Anisolabis maritima*), a shore-dwelling species with uniquely sexually dimorphic weaponry which influences interactions between individuals. Stay tuned for what we discover about this pinchy beach bum in summer 2024!
 
-This website also includes a short study of the epiphytic lichen *Coenogonium*, conducted in northeastern Costa Rica during January 2024 as part of Villanova University's Field Ecology and Evolution Course. You can view this study [here](lichenproject.html).
+This website also includes an abbreviated version of my study of the epiphytic lichen *Coenogonium*, conducted in northeastern Costa Rica during January 2024 as part of Villanova University's Field Ecology and Evolution Course. You can view this study [here](lichenproject.html).
 
 
