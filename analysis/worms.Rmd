@@ -1,0 +1,61 @@
+---
+title: "Photography"
+author: "cyoung30"
+date: "2024-02-22"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+# Who's that worm: Photographing a wiggly invasion
+
+#### Lately I have taken a serious interest in the biology of invasive species. What enables a foreign organism to succesfully establish and spread? What effects do these invaders have on native ecosystems? What can we do to try to prevent them from doing further damage?
+
+#### The first challenge is identifying an invasive species, and that's where my camera comes in! Many important nonnative species go unnoticed due to their small size and furtive nature, yet can be easy to identify from a good photo.
+
+```{r, echo=FALSE}
+library(grid)
+library(png)
+```
+
+## Geoplanidae
+
+#### While the US has a small number of native species in this family, most of the commonly encountered geoplanid land flatworms are introductions from elsewhere. Spread by the international trade in ornamental or crop plants, South Florida is a hotbed of invasive flatworm activity. I have seen eight of the dozen or so nonnative geoplanarians in Miami, and discuss a few below.
+
+#### A species I was particularly proud of observing is *Anisorhynchodemus mediolineatus*, likely the latest arrival and a species that has only been photographed twice before. Regrettably my specimen melted into a useless ooze before I was unable to preserve it and get it to researchers.
+```{r, echo=FALSE, fig.cap="*Anisorhynchodemus mediolineatus*, a new introduction to South Florida from Indonesia", out.width = '70%'}
+medio <- readPNG("docs/photo_assets/rhynchindet.png")
+grid.raster(medio, just = "center")
+```
+ 
+#### Some invasive flatworms lack a name entirely, however: the reddish *Caenoplana* quite common in Miami appears to either be a new species or one whose description was lost. It feeds on arthropods, including other invasive species such as *Venezillo* isopods and various cockroaches.
+
+```{r, echo=FALSE, fig.cap="*Caenoplana* sp., an arthropod-feeding species of probable Australian origin", out.width = '70%'}
+caeno <- readPNG("docs/photo_assets/caenoplana.png")
+grid.raster(caeno, just = "center")
+```
+
+
+#### Due to their specialized diets and lack of native predators, some geoplanids have the potential to devastate native populations of snails, worms, or arthropods. *Platydemus manokwari*, a molluscivorous species, has been implicated in the extinction of several island snails in the Pacific, making it the flatworm of of greatest ecological concern.
+
+#### *Bipalium vagum* is also a molluscivore, but due to its smaller size likely cannot predate the large and imperiled *Liguus* snails endemic to Florida. However, further work is needed to understand the effects of this species on native snails.
+```{r, echo=FALSE, fig.cap="*Bipalium vagum*, a small hammerhead worm", out.width = '70%'}
+bip <- readPNG("docs/photo_assets/bvagum.png")
+grid.raster(bip, just = "center")
+```
+
+
+## Oligochaeta
+
+#### In the northeastern US, few native earthworms recolonized the region after the recession of the glaciers. Nearly all of the commonly seen earthworms are nonnative, and several of them are quite destructive, competing with native detritivores and altering nutrient cycles in forest habitats.
+
+#### As concerning as these earthworms are, however, it's likely that they're here to stay. It's always pertinent to keep watch for new introductions, though, since invasive species are easiest to control when detected early. I believe I have found at least one previously unrecorded introduced earthworm, a large pink *Metaphire* species with a spermathecal formula and phenology (adults active in spring) that matches none of its four congeners now found in the US.
+
+#### Aside from that, I find photographing earthworms rewarding: nearly all species are only photographed as specimens or with phone cameras that make identification impossible, so many of my photos are among the only verifiable images of these species alive within the US. And admittedly, a display of this imported biodiversity is oddly beautiful when they are lined up next to one another! 
+
+```{r, echo=FALSE, out.width = '100%'}
+verm <- readPNG("docs/photo_assets/earthworms.png")
+grid.raster(verm, just = "center")
+```
+
+From top left: *Lumbricus terrestris*, *Lumbricus rubellus*, *Lumbricus castaneus*, *Allolobophora chlorotica*, *Octolasion cyaneum*, *Octolasion tyrtaeum*, *Octolasion lacteum*, *Aporrectodea rosea*, *Aporrectodea turgida*, *Aporrectodea caliginosa*, *Aporrectodea* cf. *longa*, *Aporrectodea* cf. *limicola*, *Eiseniella tetraedra*, *Bimastos rubidus*, *Bimastos* sp., *Microscolex* sp., __*Metaphire*__ sp., *Amynthas hupeiensis*, *Amynthas agrestis*, *Amynthas* cf. *corticis*
+
